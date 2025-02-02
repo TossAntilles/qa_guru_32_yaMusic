@@ -18,7 +18,6 @@ import yandexMusic.data.Language;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
-@Tag("musicMain")
 public class YandexMusicMainPageTest extends BeforeAllClosePopup {
 
     YandexMusicMainPageComponents yaMusic = new YandexMusicMainPageComponents();
@@ -37,7 +36,7 @@ public class YandexMusicMainPageTest extends BeforeAllClosePopup {
         clearBrowserCookies();
     }
 
-
+    @Tag("musicMain")
     @Feature("Яндекс.Музыка")
     @Issue("Проверка главной страницы Яндекс.Музыки")
     @Story("Проверка имени блоков на главной")
@@ -64,6 +63,7 @@ public class YandexMusicMainPageTest extends BeforeAllClosePopup {
         });
     }
 
+    @Tag("musicMain")
     @Feature("Яндекс.Музыка")
     @Issue("Проверка главной страницы Яндекс.Музыки")
     @Story("Проверка имени блоков на главной")
@@ -90,6 +90,7 @@ public class YandexMusicMainPageTest extends BeforeAllClosePopup {
         });
     }
 
+    @Tag("musicMain")
     @Feature("Яндекс.Музыка")
     @Issue("Проверка сабкатегории Яндекс.Музыки")
     @Story("Проверка имени блоков на сабстранице")
@@ -113,6 +114,7 @@ public class YandexMusicMainPageTest extends BeforeAllClosePopup {
         });
     }
 
+    @Tag("musicMain")
     @Feature("Яндекс.Музыка")
     @Issue("Проверка главной страницы Яндекс.Музыки")
     @Story("Проверка выбора языка")

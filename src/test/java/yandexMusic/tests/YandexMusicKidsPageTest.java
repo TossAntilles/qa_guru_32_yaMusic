@@ -11,7 +11,7 @@ import yandexMusic.components.YandexMusicKidsPageSteps;
 
 import static com.codeborne.selenide.Selenide.*;
 
-@Tag("musicKids")
+
 public class YandexMusicKidsPageTest extends BeforeAllClosePopup {
 
     YandexMusicKidsPageSteps steps = new YandexMusicKidsPageSteps();
@@ -27,7 +27,7 @@ public class YandexMusicKidsPageTest extends BeforeAllClosePopup {
         clearBrowserCookies();
     }
 
-
+    @Tag("musicKids")
     @Test
     @Feature("Яндекс.Музыка Kids")
     @Issue("Проверка детской страницы Яндекс.Музыки")
@@ -48,6 +48,7 @@ public class YandexMusicKidsPageTest extends BeforeAllClosePopup {
         steps.takeScreenshot();
     }
 
+    @Tag("musicKids")
     @Test
     @Feature("Яндекс.Музыка Kids")
     @Issue("Проверка детской страницы Яндекс.Музыки")
@@ -69,6 +70,7 @@ public class YandexMusicKidsPageTest extends BeforeAllClosePopup {
         steps.takeScreenshot();
     }
 
+    @Tag("musicKids")
     @Feature("Яндекс.Музыка Kids")
     @Issue("Проверка детской страницы Яндекс.Музыки")
     @Story("Проверка выбора языка")
