@@ -14,6 +14,7 @@ public class BeforeAllClosePopup {
         Configuration.pageLoadStrategy = "eager";
         open("https://music.yandex.ru/");
         refresh();
+        Configuration.remote = "https://allure8:allure8@selenoid.autotests.cloud/wd/hub";
 
         //set language
         $(".d-lang-switcher").scrollIntoView(true).click();
