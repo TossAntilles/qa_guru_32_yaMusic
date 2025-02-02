@@ -25,7 +25,6 @@ public class YandexMusicMainPageTest extends BeforeAllClosePopup {
 
     @BeforeEach
     public void beforeEach(){
-        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Открываем главную страницу Яндекс.Музыки", () -> {
             yaMusic.openPage();
         });

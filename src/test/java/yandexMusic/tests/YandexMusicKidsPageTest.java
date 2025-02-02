@@ -18,7 +18,6 @@ public class YandexMusicKidsPageTest extends BeforeAllClosePopup {
 
     @BeforeEach
     public void beforeEach(){
-        SelenideLogger.addListener("allure", new AllureSelenide());
         steps.openPage();
     }
 
