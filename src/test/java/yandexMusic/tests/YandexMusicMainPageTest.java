@@ -3,6 +3,7 @@ package yandexMusic.tests;
 
 import static io.qameta.allure.Allure.attachment;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import helpers.Attach;
 import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
@@ -24,7 +25,6 @@ public class YandexMusicMainPageTest extends BeforeAllClosePopup {
 
     @BeforeEach
     public void beforeEach(){
-        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Открываем главную страницу Яндекс.Музыки", () -> {
             yaMusic.openPage();
         });
@@ -32,7 +32,10 @@ public class YandexMusicMainPageTest extends BeforeAllClosePopup {
     }
 
     @AfterEach
-    public void afterEach(){
+        public void afterEach(){
+        Attach.screenshotAs("Last Screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
         clearBrowserCookies();
     }
 
@@ -59,7 +62,6 @@ public class YandexMusicMainPageTest extends BeforeAllClosePopup {
     void checkPageCouruselsAndList(String elementName){
         step("Проверяем хэдер страницы", () -> {
             yaMusic.checkBlockHeader(elementName);
-            attachment("Source", webdriver().driver().source());
         });
     }
 
@@ -86,7 +88,6 @@ public class YandexMusicMainPageTest extends BeforeAllClosePopup {
     void checkPageCouruselsAndListSubtext(String elementName, String substring){
         step("Проверяем заголовки и подзаголовки в блоках на странице", () -> {
             yaMusic.checkSubtitle(elementName, substring);
-            attachment("Source", webdriver().driver().source());
         });
     }
 
@@ -110,7 +111,6 @@ public class YandexMusicMainPageTest extends BeforeAllClosePopup {
         });
         step("Проверяем заголовки и подзаголовки в блоках на странице", () -> {
             yaMusic.checkSubtitle(elementName, substring);
-            attachment("Source", webdriver().driver().source());
         });
     }
 
@@ -132,7 +132,6 @@ public class YandexMusicMainPageTest extends BeforeAllClosePopup {
         });
         step("Проверяем языв заголовка страницы", () -> {
             yaMusic.checkHeader(language);
-            attachment("Source", webdriver().driver().source());
         });
     }
 

@@ -60,8 +60,4 @@ public class YandexMusicKidsPageSteps {
         $(".d-header__title-text").shouldHave(text(title));
     }
 
-    @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
-    public byte[] takeScreenshot() {
-        return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
-    }
 }
