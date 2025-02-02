@@ -11,7 +11,7 @@ import yandexMusic.components.YandexMusicKidsPageSteps;
 
 import static com.codeborne.selenide.Selenide.*;
 
-
+@Tag("musicKids")
 public class YandexMusicKidsPageTest extends BeforeAllClosePopup {
 
     YandexMusicKidsPageSteps steps = new YandexMusicKidsPageSteps();

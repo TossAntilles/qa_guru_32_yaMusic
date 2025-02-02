@@ -18,6 +18,7 @@ import yandexMusic.data.Language;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
+@Tag("musicMain")
 public class YandexMusicMainPageTest extends BeforeAllClosePopup {
 
     YandexMusicMainPageComponents yaMusic = new YandexMusicMainPageComponents();
