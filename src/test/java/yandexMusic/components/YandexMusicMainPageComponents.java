@@ -14,15 +14,15 @@ import static com.codeborne.selenide.Selenide.*;
 public class YandexMusicMainPageComponents {
 
     private static SelenideElement pageHeader = $(".d-header__title-text"),
-        languageSwitcher = $(".d-lang-switcher"),
-        blockHeader = $(".centerblock");
+            languageSwitcher = $(".d-lang-switcher"),
+            blockHeader = $(".centerblock");
     private static BaseElementsCollection languageSwitcherSelector =  $$(".deco-popup-menu__item"),
-        blockSubtitle = $$(".page-line__subtitle");
+            blockSubtitle = $$(".page-line__subtitle");
 
 
     public YandexMusicMainPageComponents openPage() {
         open("https://music.yandex.ru/");
-         return this;
+        return this;
     }
 
     public YandexMusicMainPageComponents checkBlockHeader(String blockHeaderName){

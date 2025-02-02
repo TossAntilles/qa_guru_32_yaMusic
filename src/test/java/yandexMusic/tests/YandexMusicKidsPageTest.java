@@ -1,7 +1,6 @@
 package yandexMusic.tests;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-import helpers.Attach;
 import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
@@ -19,18 +18,16 @@ public class YandexMusicKidsPageTest extends BeforeAllClosePopup {
 
     @BeforeEach
     public void beforeEach(){
+        SelenideLogger.addListener("allure", new AllureSelenide());
         steps.openPage();
     }
 
     @AfterEach
     public void afterEach(){
-        Attach.screenshotAs("Last Screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
         clearBrowserCookies();
     }
 
-    @Tag("musicKids")
+
     @Test
     @Feature("Яндекс.Музыка Kids")
     @Issue("Проверка детской страницы Яндекс.Музыки")
@@ -48,9 +45,9 @@ public class YandexMusicKidsPageTest extends BeforeAllClosePopup {
         steps.checkHeaderMenu();
         steps.checkHeaderPromo();
         steps.checkHeaderLogin();
+        steps.takeScreenshot();
     }
 
-    @Tag("musicKids")
     @Test
     @Feature("Яндекс.Музыка Kids")
     @Issue("Проверка детской страницы Яндекс.Музыки")
@@ -69,9 +66,9 @@ public class YandexMusicKidsPageTest extends BeforeAllClosePopup {
         steps.checkCouruselsAndList("В гостях у бабушки с дедушкой");
         steps.checkCouruselsAndList("Зимние истории");
         steps.checkCouruselsAndList("Только в Яндекс Музыке");
+        steps.takeScreenshot();
     }
 
-    @Tag("musicKids")
     @Feature("Яндекс.Музыка Kids")
     @Issue("Проверка детской страницы Яндекс.Музыки")
     @Story("Проверка выбора языка")
@@ -89,5 +86,6 @@ public class YandexMusicKidsPageTest extends BeforeAllClosePopup {
     void changePageLanguage(String language, String title){
         steps.changeLanguage("RU");
         steps.checkPageTitle("Детям");
+        steps.takeScreenshot();
     }
 }
