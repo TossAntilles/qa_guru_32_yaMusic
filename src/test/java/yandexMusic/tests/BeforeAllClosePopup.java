@@ -31,8 +31,8 @@ public class BeforeAllClosePopup {
         refresh();
 
         //set language
-        $(".d-lang-switcher").scrollIntoView(true).click();
-        $$(".deco-popup-menu__item").findBy(text("RU")).click();
+        //$(".d-lang-switcher").scrollIntoView(true).click();
+        //$$(".deco-popup-menu__item").findBy(text("RU")).click();
     }
 
 
