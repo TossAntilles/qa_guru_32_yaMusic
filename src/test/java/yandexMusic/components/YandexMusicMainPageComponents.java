@@ -35,7 +35,7 @@ public class YandexMusicMainPageComponents {
         return this;
     }
 
-    public YandexMusicMainPageComponents opecCategory(String title){
+    public YandexMusicMainPageComponents openCategory(String title){
         blockSubtitle.findBy(text(title)).click();
         return this;
     }
